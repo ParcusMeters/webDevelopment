@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html>
+    <style>
+        @media (max-height: 500px) {
+            
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 480px 480px 1fr;
+            grid-template-rows: 10px 300px 150px 250px 85px 300px 100px;
+            grid-gap: 15px;
+            grid-template-areas:
+            ". blank blank ."
+            ". image intro ."
+            ". awardsLabel experienceLabel ."
+            ". awards experience ."
+            ". skillsLabel certLabel ."
+            ". skills certifications ."
+            "foot foot foot foot"; 
+
+            
+        }
+
+        .mainImage{
+            b4ck: wheat;
+            grid-area: image;
+            justify-self: end;
+            padding-right: 20px;
+        }
+        .namePlate{
+            b4ck: aqua;
+        }
+        .introductionText{
+            grid-area: intro;
+            display: grid;
+            grid-template-rows: 1fr 2fr 4fr 2fr;
+            grid-template-areas: 
+            "subtitle"
+            "name"
+            "main"
+            "download";
+        }
+
+        #mainImageFormat{
+            border-radius: 50%;
+            height: 100%;
+            box-shadow: 0 0 12px rgba(0,0,0,0.4);
+            border: 10px solid white;
+
+        }
+        #iconFormat{
+            height: 100px ;
+        }
+        
+
+        .blank{
+            b4ck: white;
+        }
+        .awardsLabel{
+            b4ck: darkorange;
+            grid-area: awardsLabel;
+            align-self:flex-end;
+        }
+        .awards{
+            b4ck: khaki;
+            grid-area: awards;
+            display: grid;
+            grid-template-columns: 100px 380px;
+            grid-template-rows: 125px 125px;
+            grid-template-areas:
+            "firstImages first"
+            "secondImages second";
+        }
+        .firstImage{
+            grid-area: firstImages;
+            b4ck: navy;
+            align-self:flex-start;
+            justify-self: center;
+            
+        }
+        .firstAward{
+            grid-area: first;
+            b4ck: hotpink;
+        }
+        .secondImage{
+            grid-area: secondImages;
+            b4ck: yellowgreen;
+            align-self:flex-start;
+            justify-self: center;
+            
+        }
+        .secondAward{
+            grid-area: second;
+            b4ck: seagreen;
+        }
+
+
+
+        .experienceLabel{
+            b4ck: coral;
+            grid-area: experienceLabel;
+            align-self:flex-end;
+        }
+        .experience{
+            b4ck: firebrick;
+            grid-area: experience;
+            display: grid;
+            grid-template-columns: 100px 380px;
+            grid-template-rows: 125px 125px;
+            grid-template-areas:
+            "Image3 firstExp"
+            "Image4 secondExp";
+            justify-items: baseline;
+        }
+        .firstExperience{
+            grid-area: firstExp;
+            b4ck: hotpink;
+        }
+        .secondExperience{
+            grid-area: secondExp;
+            b4ck: seagreen;
+        }
+        .thirdImage{
+            grid-area: Image3;
+            b4ck: navy;
+            align-self:flex-start;
+            justify-self: center;
+        }
+        .fourthImage{
+            grid-area: Image4;
+            b4ck: gold;
+            align-self:flex-start;
+            justify-self: center;
+        }
+        
+
+
+        .subtleTitle{
+            b4ck: goldenrod;
+            grid-area: subtitle;
+            align-self: flex-end;
+            margin: 0px;
+        }
+        .name{
+            b4ck: lawngreen;
+            grid-area: name;
+
+        }
+        .mainText{
+            b4ck: cadetblue;
+            grid-area: main;
+            font-family: monospace;
+            font-size: larger;
+
+        }
+        .downloadCV{
+            grid-area: download;
+            font-family: monospace;
+            display: grid;
+            grid-template-columns: 170px 40px;
+            grid-template-areas: "download contact";
+
+        }
+
+        
+        .skillsLabel{
+            b4ck: darkorange;
+            grid-area: skillsLabel;
+            align-self:flex-end;
+        }
+        .certLabel{
+            b4ck: darkorange;
+            grid-area: certLabel;
+            align-self:flex-end;
+        }
+
+
+        .skills{
+            b4ck: firebrick;
+            grid-area: skills;
+            display: grid;
+            grid-template-columns: 100px 380px;
+            grid-template-rows: 125px 125px;
+            grid-template-areas:
+            "icon skill"
+            "icon2 skill2";
+            justify-items: baseline;
+        }
+        .skill{
+            grid-area: skill;
+            b4ck: hotpink;
+        }
+        .skillIcon{
+            grid-area: icon;
+            b4ck: navy;
+            align-self:flex-start;
+            justify-self: center;
+        }
+        .skill2{
+            grid-area: skill2;
+            b4ck: greenyellow;
+        }
+        .skillIcon2{
+            grid-area: icon2;
+            b4ck: violet;
+            align-self:flex-start;
+            justify-self: center;
+        }
+
+        .certifications{
+            b4ck: firebrick;
+            grid-area: certifications;
+            display: grid;
+            grid-template-columns: 100px 380px;
+            grid-template-rows: 125px 125px;
+            grid-template-areas:
+            "icon skill"
+            "icon2 skill2";
+            justify-items: baseline;
+        }
+        .cert{
+            grid-area: skill;
+            b4ck: hotpink;
+        }
+        .certIcon{
+            grid-area: icon;
+            b4ck: navy;
+            align-self:flex-start;
+            justify-self: center;
+        }
+        .cert2{
+            grid-area: skill2;
+            b4ck: greenyellow;
+        }
+        .certIcon2{
+            grid-area: icon2;
+            b4ck: violet;
+            align-self:flex-start;
+            justify-self: center;
+        }
+
+        .foot{
+            background-color: dodgerblue;
+            grid-area: foot;
+        }
+
+
+        h1{
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 60px;
+            padding : 0;
+            margin : 0;
+        }
+
+        h2{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 26px;
+        }
+        h3{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 17px;
+            color: grey;
+            padding : 0;
+            margin : 0;
+        }
+        h4{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 17px;
+            padding : 0;
+            margin : 0;
+        }
+        p{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 17px;
+            padding : 0;
+            margin-top: 5px;
+        }
+        ion-icon{
+            color:dodgerblue;
+            font-size: 50px;
+        }
+        
+        .area1{
+            grid-area: download;
+        }
+
+        .area2{
+            grid-area: contact;
+        }
+
+        .download{
+            border-radius: 100px;
+            background-color: white;
+            border-color: gray;
+            border-width: 3px;
+            width: 150px;
+            height: 40px;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+            cursor: pointer;
+            overflow: clip;
+            padding: 0px;
+            margin: 0px;
+
+        }
+        .download:hover{
+            border-radius: 100px;
+            background-color: white;
+            border-color: dodgerblue;
+            border-width: 3px;
+            width: 150px;
+            height: 40px;
+
+        }
+        .otherText{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        body{
+            margin: 0px;
+        }
+        .footerText{
+            color: white;
+            font-size: 12px;
+            padding-left: 44%;
+            padding-top: 38px;
+        }
+        
+
+    </style>
+
+
+
+<Title>Marcus Peters</Title>
+<body>
+    <script>
+        if(screen.width <=699){
+            document.location = "MobileCV.html"
+        }
+    </script>
+    <div class="container" grid> 
+        <div class="blank"></div>
+        <div class="mainImage"><img src="marcus blue shirt (2).jpg" id="mainImageFormat"></div> 
+        <div class="introductionText" grid>
+            <div class="subtleTitle"> <h3>Student at the University of Sydney </h3>  </div>
+            <div class="name"> <h1>Marcus Peters</h1> </div>
+            <div class="mainText"><p>I study a Bachelor of Economics and a Bachelor of Advanced Studies majoring in Financial Economics and Software Development respectably.     
+                                        I love the beach, sports, and making music with my mates.</p> 
+            </div>
+            <div class="downloadCV" grid> 
+                <a href="ResumePDF (1).pdf" download="Marcus Peters CV" class="area1">
+                    <button type="button" class="download">
+                        <h4>Download CV</h4>
+                    </button>
+                </a>    
+                <a href="https://www.linkedin.com/in/marcus-peters-538595192/" class="area2">
+                    <button type="button" class="download">
+                        <h4>Contact</h4>
+                    </button>
+                </a>
+            </div>
+        </div> 
+        
+        <div class="awardsLabel"><h2>Awards</h2></div>
+        <div class="experienceLabel"><h2>Experience</h2></div> 
+
+
+
+        <div class="awards" grid>
+            <div class="firstImage"><ion-icon name="ribbon-outline"></ion-icon></div>
+            <div class="firstAward"> <h4>Council Scholarship for Academic Ability</h4> 
+
+            <p>Provides for the remission of half the annual school tuition fee, on the premise of continual academic excellence.</p> </div>
+                
+            <div class="secondImage"><ion-icon name="ribbon-outline"></div>
+            <div class="secondAward"><h4>Charlotte Carlin Scholarship for Literature</h4>
+                <p> 
+            
+                
+                
+                Awarded for the proficiency of the English language with the avoidance of clichés, displayed by having the highest English grade in the cohort during senior years.</p></div>
+        
+        </div> 
+
+
+        <div class="experience" grid>
+            <div class="thirdImage"><ion-icon name="school-outline"></div>
+            <div class="firstExperience"><h4>Tutor</h4>
+                <p>Tutoring University level economics and software engineering to students of St. Andrew's college. From 2021 onwards. </p></div>
+            <div class="fourthImage"><ion-icon name="color-palette-outline"></div>
+            <div class="secondExperience"><h4>2020-2022</h4><p>Working as an Educator at Guildford Grammar School in the Out of School Care program.</p></div>
+
+        </div> 
+
+        <div class="skillsLabel"><h2>Certifications</h2></div>
+        <div class="certLabel"><h2>Skills</h2></div> 
+
+        <div class="skills" grid>
+            <div class="skillIcon"><ion-icon name="fish-outline"></div>
+            <div class="skill"><h4>PADI® Open Water Diving Licence</h4><p>PADI® Open Water Diver is the first scuba certification level.</p></div>
+            <div class="skillIcon2"><ion-icon name="medkit-outline"></div>
+            <div class="skill2"><h4>First Aid</h4><p class="otherText">HLTAID009 - Provide cardiopulmonary resuscitation.</p><p class="otherText">HLTAID004 - Provide an emergency first aid response in an education and care setting.</p></div>
+        </div>
+
+        <div class="certifications" grid>
+            <div class="certIcon"><ion-icon name="terminal-outline"></div>
+            <div class="cert"><h4>Java and JavaScript</h4><p>PADI® Open Water Diver is the first scuba certification level.</p></div>
+            <div class="certIcon2"><ion-icon name="terminal-outline"></div>
+            <div class="cert2"><h4>HTML5 and CSS</h4><p class="otherText">HLTAID009 - Provide cardiopulmonary resuscitation.</p><p class="otherText">HLTAID004 - Provide an emergency first aid response in an education and care setting.</p></div>
+        </div>
+        <div class="foot"><p class="footerText">Website designed and created by Marcus Peters.</p></div>
+
+    
+    </div>
+        
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+<footer>
+</footer>
+</html>
